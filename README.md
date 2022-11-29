@@ -6,7 +6,7 @@ APIs typically use tokens to authenticate users and do not maintain session stat
 # Steps for Installation
 ## Step 1: Install Package
 
-```` 
+```javascript 
 composer require laravel/passport
 ````
 - Open config/app.php file and Add Service Provider.
