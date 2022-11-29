@@ -10,8 +10,8 @@ APIs typically use tokens to authenticate users and do not maintain session stat
 composer require laravel/passport
 ````
 - Open config/app.php file and Add Service Provider.
-
-````
+- 
+```javascript 
 config/app.php
 'providers' =>[
 Laravel\Passport\PassportServiceProvider::class,
@@ -19,7 +19,7 @@ Laravel\Passport\PassportServiceProvider::class,
 ````
 ## Step 2: Run Migration and Install Passport
 
-````
+```javascript 
 php artisan migrate
 php artisan passport:install
 ````
@@ -107,7 +107,7 @@ class AuthServiceProvider extends ServiceProvider
 
 ## Step 5: Create/Define API Route	in routes/api.php File
 
-````
+```javascript 
 Route::post('login', [\App\Http\Controllers\PassportAPI\PassportAPIController::class,'login']);
 Route::post('register', [\App\Http\Controllers\PassportAPI\PassportAPIController::class, 'register']);
 Route::group(['middleware' => 'auth:api'], function(){
