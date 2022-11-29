@@ -26,7 +26,7 @@ php artisan passport:install
 
 ## Step 3: Passport Configuration app/Models/User.php
 
-````
+```javascript 
 <?php
 namespace App;
 use Laravel\Passport\HasApiTokens;
@@ -58,7 +58,7 @@ protected $hidden = [
 
 - Open app/Providers/AuthServiceProvider.php File.
 
-````
+```javascript 
 <?php
 namespace App\Providers;
 use Laravel\Passport\Passport; 
@@ -91,7 +91,7 @@ class AuthServiceProvider extends ServiceProvider
 
 ## Step 4: Open config/auth.php
 
-````
+```javascript 
 'guards' => [ 
         'web' => [ 
             'driver' => 'session', 
@@ -117,7 +117,7 @@ Route::group(['middleware' => 'auth:api'], function(){
 
 ## Step 6: Create a Controller
 
-````
+```javascript
 <?php
 namespace App\Http\Controllers\PassportAPI;
 use App\Http\Controllers\Controller;
